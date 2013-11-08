@@ -1,14 +1,9 @@
-$(document).ready(function(){
+var seenew=function(id){
+	var coll=document.getElementsByClassName('stuff')
+	var i= coll.length;
+	for (j=0;j<i;j++){
+		coll[j].style.display="none";
+}
 
-var text1=$('#first');
-var text2=$('#second');
-
-
-$('#firstbutton').click(function(){
-
-	$('#secondtext').hide();
-	$('#firsttext').slideDown('fast');
-})
-});
-
-
+	document.getElementById(id).style.display="block";
+	}
