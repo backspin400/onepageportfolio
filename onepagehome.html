@@ -39,7 +39,7 @@
 
     <div class="navbar navbar-inverse navbar-fixed-top" style="position:fixed">
       <div class="navbar-inner">
-        <div class="container">
+        <div class="">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" style="margin-right:20px;">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -48,11 +48,11 @@
           <p class="brand smallcaps" style="margin-left:10px; margin-bottom:0;font-size:22px;">Barry Charles Leybovich</p>
           <div class="nav-collapse collapse"  style="margin-left:10px">
             <ul class="nav smallcaps" style="padding-top:2px" >
-              <li><a href="bootstrappractice.html">Home</a></li>
-              <li><a href="bootstrapexperience.html">Experience</a></li>
-              <li><a href="bootstrapprojects.html">Projects</a></li>
-              <li><a href="bootstrapeducation.html">Education</a></li>
-              <li><a href="bootstrapskills.html">Skills and Activities</a></li>
+              <li><a onclick="seenew('splash')">Home</a></li>
+              <li><a onclick="seenew('experience')">Experience</a></li>
+              <li><a onclick="seenew('projects')">Projects</a></li>
+              <li><a onclick="seenew('education')">Education</a></li>
+              <li><a onclick="seenew('skills')">Skills and Activities</a></li>
               <li><a data-toggle="modal" href="#contact">Contact</a><li>
             </ul>
             
@@ -63,7 +63,58 @@
 
 
 
+ <div class="container" id="splash">
 
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Welcome!</h1>
+        <p>Poke around to learn more about me!</p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span3">
+          <h3>Experience</h3>
+          <p>My experience ranges from medical devices to financial services to fitness wearables.</p>
+          <p><a class="btn" onclick="seenew('experience')">View details  &raquo; &raquo;</a></p>
+        </div>
+        <div class="span3">
+          <h3>Projects</h3>
+          <p>I have worked on several design projects at Johns Hopkins working both with researchers and corporate sponsors.</p>
+          <p><a class="btn" onclick="seenew('projects')">View details &raquo;</a></p>
+       </div>
+        <div class="span3">
+          <h3>Education</h3>
+          <p>I have a long history of pushing myself academically, both inside the classroom and out.</p>
+          <p><a class="btn" onclick="seenew('education')">View details &raquo;</a></p>
+        </div>
+        <div class="span3">
+          <h3>Skills and Activities</h3>
+          <p>My skills are constantly evolving and growing, particularly in programming and software.<br>
+          My activities are primarily focused on community building and sports.</p>
+          <p><a class="btn" onclick="seenew('skills')">View details &raquo;</a></p>
+        </div>
+      </div>
+
+
+
+
+         <div id="contact" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h3 id="myModalLabel">Contact Me</h3>
+            </div>
+            <div class="modal-body">
+              <p><strong>Email: </strong><a href="mailto:bleybovich@gmail.com">bleybovich@gmail.com</a><br>
+                <strong>LinkedIn: </strong><a href="http://www.linkedin.com/in/barryleybovich">Barry C. Leybovich</a></p>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+
+      <hr>
+
+    </div> <!-- /container -->
 
     <div class="container" id="projects">
 
@@ -630,7 +681,20 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    
+    <script>  
+var seenew=function(id){
+  var coll=document.getElementsByClassName('container')
+  var i= coll.length;
+  for (j=0;j<i;j++){
+    coll[j].style.display="none";
+}
+
+  document.getElementById(id).style.display="block";
+  };
+  seenew('splash');
+
+
+    </script>
     <script src="assets/js/jquery-2.0.3.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 <!-- <script src="assets/js/bootstrap-alert.js"></script>
