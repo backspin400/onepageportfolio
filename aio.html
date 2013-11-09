@@ -76,7 +76,7 @@
         <div class="span3">
           <h3>Experience</h3>
           <p>My experience ranges from medical devices to financial services to fitness wearables.</p>
-          <p><a class="btn" onclick="seenew('experience')">View details  &raquo; &raquo;</a></p>
+          <p><a class="btn" onclick="seenew('experience')">View details  &raquo; </a></p>
         </div>
         <div class="span3">
           <h3>Projects</h3>
@@ -99,7 +99,12 @@
 
 
 
-         <div id="contact" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         
+
+      <hr>
+
+    </div> <!-- /container -->
+<div id="contact" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
               <h3 id="myModalLabel">Contact Me</h3>
@@ -111,11 +116,6 @@
             <div class="modal-footer">
             </div>
           </div>
-
-      <hr>
-
-    </div> <!-- /container -->
-
     <div class="container" id="projects">
 
       <!-- Main hero unit for a primary marketing message or call to action -->
@@ -255,7 +255,7 @@
       </div>
     </div>
 
-  
+  <hr>
   </div>
     <div class="container" id="skills">
 
@@ -389,25 +389,7 @@
     
       </div>
 
-
-         <div id="contact" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <h3 id="myModalLabel">Contact Me</h3>
-            </div>
-            <div class="modal-body">
-              <p><strong>Email: </strong><a href="mailto:bleybovich@gmail.com">bleybovich@gmail.com</a><br>
-                <strong>LinkedIn: </strong><a href="http://www.linkedin.com/in/barryleybovich">Barry C. Leybovich</a></p>
-            </div>
-            <div class="modal-footer">
-            </div>
-          </div>
-
       <hr>
-
-      <footer>
-        <p>&copy; Barry Leybovich | <a href="mailto:bleybovich@gmail.com">Email</a> | <a href="http://www.linkedin.com/in/barryleybovich">LinkedIn</a></p>
-      </footer>
 
     </div>
 
@@ -528,6 +510,7 @@
 
 
 </div>
+<hr>
       </div>
 
     <div class="container" id="education">
@@ -652,31 +635,18 @@
           </p>
         </div>
       </div>
-
+<hr>
 </div>
 
 
 
-         <div id="contact" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <h3 id="myModalLabel">Contact Me</h3>
-            </div>
-            <div class="modal-body">
-              <p><strong>Email: </strong><a href="mailto:bleybovich@gmail.com">bleybovich@gmail.com</a><br>
-                <strong>LinkedIn: </strong><a href="http://www.linkedin.com/in/barryleybovich">Barry C. Leybovich</a></p>
-            </div>
-            <div class="modal-footer">
-            </div>
-          </div>
 
-      <hr>
-
+<div class="container" id="foot">
       <footer>
         <p>&copy; Barry Leybovich | <a href="mailto:bleybovich@gmail.com">Email</a> | <a href="http://www.linkedin.com/in/barryleybovich">LinkedIn</a></p>
       </footer>
-
-    </div> <!-- /container -->
+</div>
+     <!-- /container -->
 
     <!-- Le javascript
     ================================================== -->
@@ -690,6 +660,8 @@ var seenew=function(id){
 }
 
   document.getElementById(id).style.display="block";
+
+  document.getElementById("foot").style.display="block";
   };
   seenew('splash');
 
